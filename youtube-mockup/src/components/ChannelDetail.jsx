@@ -15,7 +15,7 @@ const ChannelDetail = () => {
       setChannelDetail(data?.items[0])
     );
 
-    fetchFromAPI(`search?channelId${id}&part=snippet&order=date`).then((data) =>
+    fetchFromAPI(`search?channelId=${id}&part=snippet%2Cid&order=date`).then((data) =>
       setVideos(data?.items)
     );
   }, [id]);
